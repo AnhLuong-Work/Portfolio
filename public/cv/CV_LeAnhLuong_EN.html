@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lê Anh Lương — .NET Backend Developer</title>
+<style>
+  :root{ --ink:#1f2933; --muted:#5b6b7b; --accent:#0b6b5e; --line:#dfe6ec; --bg:#fff; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ font-family:"Segoe UI",-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink); background:#eef1f4; font-size:10.3pt; line-height:1.45; }
+  .page{ max-width:210mm; min-height:297mm; margin:14px auto; background:var(--bg);
+    padding:16mm 15mm; box-shadow:0 2px 16px rgba(0,0,0,.12); }
+  header{ border-bottom:2.5px solid var(--accent); padding-bottom:10px; margin-bottom:14px; }
+  h1{ font-size:23pt; letter-spacing:.3px; color:var(--ink); }
+  .role{ font-size:11.5pt; font-weight:600; color:var(--accent); margin-top:2px; }
+  .contact{ margin-top:8px; font-size:9.3pt; color:var(--muted); line-height:1.7; }
+  .contact a{ color:var(--muted); text-decoration:none; }
+  .contact b{ color:var(--ink); }
+  h2{ font-size:11pt; text-transform:uppercase; letter-spacing:1px; color:var(--accent);
+    margin:16px 0 7px; padding-bottom:3px; border-bottom:1px solid var(--line); }
+  section:first-of-type h2{ margin-top:4px; }
+  p.summary{ text-align:justify; color:#33414e; }
+  .skills{ list-style:none; }
+  .skills li{ margin:3px 0; padding-left:0; }
+  .skills b{ color:var(--ink); }
+  .job{ margin-bottom:11px; }
+  .job-h{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
+  .job-h .t{ font-weight:700; font-size:10.7pt; }
+  .job-h .d{ color:var(--muted); font-size:9pt; white-space:nowrap; font-style:italic; }
+  .job .ctx{ color:var(--muted); font-size:9.3pt; margin:1px 0 5px; }
+  .sub{ font-weight:600; color:var(--accent); margin:6px 0 2px; font-size:9.8pt; }
+  ul.bullets{ list-style:none; }
+  ul.bullets li{ position:relative; padding-left:13px; margin:2.5px 0; text-align:justify; }
+  ul.bullets li::before{ content:""; position:absolute; left:2px; top:7px; width:4px; height:4px;
+    background:var(--accent); border-radius:50%; }
+  .edu .t{ font-weight:700; }
+  .edu .d{ color:var(--muted); font-style:italic; font-size:9.3pt; }
+  .note{ color:var(--muted); font-size:9.3pt; font-style:italic; }
+  @media print{
+    body{ background:#fff; font-size:10pt; }
+    .page{ margin:0; box-shadow:none; padding:12mm 14mm; max-width:none; min-height:auto; }
+    h2{ break-after:avoid; } .job,.edu li{ break-inside:avoid; }
+    @page{ size:A4; margin:0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Lê Anh Lương</h1>
+    <div class="role">.NET Backend Developer</div>
+    <div class="contact">
+      Hà Nội, Vietnam &nbsp;·&nbsp; <b>+84 976 564 969</b> &nbsp;·&nbsp; <a href="mailto:leanhluong0110@gmail.com">leanhluong0110@gmail.com</a><br>
+      <a href="https://github.com/leanhluong">github.com/leanhluong</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/anh-l%C6%B0%C6%A1ng-l%C3%AA-22a985370/">linkedin.com/in/anh-luong-le</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">Backend developer with ~2–3 years of experience building <b>production .NET microservices</b> for a multi-tenant SaaS platform. Strong in <b>C# / ASP.NET Core</b> with Clean Architecture, CQRS and DDD; comfortable across <b>PostgreSQL, Redis, RabbitMQ/MassTransit and SignalR</b>. Owned several services end-to-end (omni-channel chat, HRM, club management, marketing) and contributed to <b>core platform security</b> — IAM, API Gateway and access-control device integration. Pragmatic, security-minded, and used to PR-based teamwork with tests and CI/CD.</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <ul class="skills">
+      <li><b>Languages:</b> C#, TypeScript, JavaScript, SQL</li>
+      <li><b>Backend / .NET:</b> ASP.NET Core Web API, EF Core, Clean Architecture, CQRS + pipeline behaviors, DDD, Result pattern, gRPC, SignalR (real-time)</li>
+      <li><b>Data:</b> PostgreSQL 16 (Row-Level Security, JSONB, pgvector), Redis 7, EF Core; multi-tenant data isolation</li>
+      <li><b>Messaging / Async:</b> RabbitMQ, MassTransit, Hangfire background jobs</li>
+      <li><b>Security:</b> JWT (RS256 / JWKS), OAuth2 / OIDC, Argon2id, AES-256-GCM, 2FA (TOTP), CSRF, rate limiting, RBAC, API keys</li>
+      <li><b>Infra / DevOps:</b> Docker, YARP API Gateway, Serilog, OpenTelemetry, GitHub Packages (private NuGet), CI/CD, Git</li>
+      <li><b>Testing:</b> xUnit, NSubstitute, FluentAssertions, Testcontainers</li>
+      <li><b>Integrations:</b> Facebook Messenger, Zalo OA/Personal, VNPay, Hikvision (ISAPI), OpenAI</li>
+      <li><b>Frontend (working):</b> ReactJS, Next.js, Tailwind CSS</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+      <div class="job-h"><span class="t">NextX — .NET Backend Developer</span><span class="d">2024 – Present · Hà Nội</span></div>
+      <div class="ctx">Multi-tenant SaaS platform built as ~20 .NET microservices (Clean Architecture, shared-kernel NuGet, PostgreSQL, RabbitMQ, YARP gateway, gRPC).</div>
+
+      <div class="sub">Communication service (omni-channel chat) — primary owner</div>
+      <ul class="bullets">
+        <li>Built an omni-channel inbox unifying <b>Facebook Messenger, Zalo OA/Personal and a web chat widget</b> (100+ API endpoints), with real-time message delivery over <b>SignalR</b>.</li>
+        <li>Implemented an <b>AI chatbot</b> using <b>pgvector</b> cosine similarity + GPT (RAG) for grounded, low-hallucination answers.</li>
+        <li>Designed <b>smooth weighted round-robin</b> agent routing; ingested provider webhooks with a fast 200-OK + <b>async Hangfire</b> processing; encrypted channel credentials at rest with <b>AES-256-GCM</b>.</li>
+      </ul>
+
+      <div class="sub">Platform security — IAM, API Gateway, Operator</div>
+      <ul class="bullets">
+        <li>Contributed to the <b>IAM</b> service (authentication, <b>JWT RS256 + JWKS</b>, <b>Argon2id</b> password hashing, <b>2FA TOTP</b>, RBAC groups/permissions, sessions) — 80+ endpoints.</li>
+        <li>Worked on the <b>YARP API Gateway</b>: a 12-step middleware pipeline incl. header-spoofing guard, JWT / API-key validation, <b>CSRF double-submit</b>, <b>Redis sliding-window rate limiting</b>, claims injection and workspace-status checks.</li>
+        <li>Enforced <b>multi-tenant isolation</b> via PostgreSQL <b>Row-Level Security</b> + EF Core global query filters.</li>
+      </ul>
+
+      <div class="sub">HRM &amp; Golf/Club management services — owner</div>
+      <ul class="bullets">
+        <li>Delivered HRM and club-management services end-to-end (domain → application → API): employee lifecycle, membership/subscription, booking and session-deduction logic.</li>
+      </ul>
+
+      <div class="sub">Access-control device integration (face / card)</div>
+      <ul class="bullets">
+        <li>Integrated <b>Hikvision</b> access-control devices (card + Face ID) via <b>ISAPI</b> and an <b>Electron agent over SignalR</b>; designed real-time <b>server-side verification</b> to gate bookings by time window, plus <b>offline reconciliation</b> and event polling for resilience.</li>
+      </ul>
+
+      <div class="sub">Marketing service</div>
+      <ul class="bullets">
+        <li>Built a bulk-campaign engine across <b>Email / SMS / Zalo ZNS</b> with automation workflows: <b>MassTransit</b> event-driven enrollment, <b>Hangfire</b> batch sending, and <b>MJML</b> email rendering.</li>
+        <li><i>Practices:</i> PR-based workflow, unit &amp; integration tests (xUnit + Testcontainers), RFC 7807 error contracts, structured logging and distributed tracing.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-h"><span class="t">FPT Software — .NET Developer Intern</span><span class="d">May 2023 – Sep 2023 · Hà Nội</span></div>
+      <ul class="bullets">
+        <li>Trained in .NET web development; built features and practiced Agile workflow, Git, debugging and coding standards.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="edu">
+    <h2>Education</h2>
+    <div class="job-h"><span class="t">FPT University (Hòa Lạc) — B.E. in Software Engineering</span><span class="d">Graduated 2025</span></div>
+    <div class="ctx">Specialization: .NET Development</div>
+  </section>
+
+  <section>
+    <h2>Selected Personal Projects</h2>
+    <ul class="bullets">
+      <li><b>AA Catering Management System</b> — graduation project; enterprise catering management. Next.js + ASP.NET Core, SignalR, Excel export, SQL Server, Docker.</li>
+      <li><b>FinTrack</b> — stock portfolio tracker. ReactJS + ASP.NET Core Web API, EF Core, JWT.</li>
+      <li><b>ShopBakery</b> — e-commerce site with <b>VNPay</b> payment. ASP.NET Core Razor Pages, EF Core.</li>
+    </ul>
+    <p class="note">GitHub: github.com/leanhluong</p>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <p>English — Intermediate (technical reading &amp; writing) &nbsp;·&nbsp; Japanese — Basic</p>
+  </section>
+</div>
+</body>
+</html>

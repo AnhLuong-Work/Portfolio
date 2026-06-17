@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lê Anh Lương — Lập trình viên Backend .NET</title>
+<style>
+  :root{ --ink:#1f2933; --muted:#5b6b7b; --accent:#0b6b5e; --line:#dfe6ec; --bg:#fff; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ font-family:"Segoe UI",-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink); background:#eef1f4; font-size:10.3pt; line-height:1.45; }
+  .page{ max-width:210mm; min-height:297mm; margin:14px auto; background:var(--bg);
+    padding:16mm 15mm; box-shadow:0 2px 16px rgba(0,0,0,.12); }
+  header{ border-bottom:2.5px solid var(--accent); padding-bottom:10px; margin-bottom:14px; }
+  h1{ font-size:23pt; letter-spacing:.3px; color:var(--ink); }
+  .role{ font-size:11.5pt; font-weight:600; color:var(--accent); margin-top:2px; }
+  .contact{ margin-top:8px; font-size:9.3pt; color:var(--muted); line-height:1.7; }
+  .contact a{ color:var(--muted); text-decoration:none; }
+  .contact b{ color:var(--ink); }
+  h2{ font-size:11pt; text-transform:uppercase; letter-spacing:1px; color:var(--accent);
+    margin:16px 0 7px; padding-bottom:3px; border-bottom:1px solid var(--line); }
+  section:first-of-type h2{ margin-top:4px; }
+  p.summary{ text-align:justify; color:#33414e; }
+  .skills{ list-style:none; }
+  .skills li{ margin:3px 0; }
+  .skills b{ color:var(--ink); }
+  .job{ margin-bottom:11px; }
+  .job-h{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
+  .job-h .t{ font-weight:700; font-size:10.7pt; }
+  .job-h .d{ color:var(--muted); font-size:9pt; white-space:nowrap; font-style:italic; }
+  .job .ctx{ color:var(--muted); font-size:9.3pt; margin:1px 0 5px; }
+  .sub{ font-weight:600; color:var(--accent); margin:6px 0 2px; font-size:9.8pt; }
+  ul.bullets{ list-style:none; }
+  ul.bullets li{ position:relative; padding-left:13px; margin:2.5px 0; text-align:justify; }
+  ul.bullets li::before{ content:""; position:absolute; left:2px; top:7px; width:4px; height:4px;
+    background:var(--accent); border-radius:50%; }
+  .edu .t{ font-weight:700; }
+  .note{ color:var(--muted); font-size:9.3pt; font-style:italic; }
+  @media print{
+    body{ background:#fff; font-size:10pt; }
+    .page{ margin:0; box-shadow:none; padding:12mm 14mm; max-width:none; min-height:auto; }
+    h2{ break-after:avoid; } .job,.edu li{ break-inside:avoid; }
+    @page{ size:A4; margin:0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Lê Anh Lương</h1>
+    <div class="role">Lập trình viên Backend .NET</div>
+    <div class="contact">
+      Hà Nội &nbsp;·&nbsp; <b>0976 564 969</b> &nbsp;·&nbsp; <a href="mailto:leanhluong0110@gmail.com">leanhluong0110@gmail.com</a><br>
+      <a href="https://github.com/leanhluong">github.com/leanhluong</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/anh-l%C6%B0%C6%A1ng-l%C3%AA-22a985370/">linkedin.com/in/anh-luong-le</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Giới thiệu</h2>
+    <p class="summary">Lập trình viên Backend với khoảng <b>2–3 năm kinh nghiệm</b> xây dựng <b>hệ thống microservices .NET chạy production</b> cho nền tảng SaaS đa khách hàng (multi-tenant). Vững <b>C# / ASP.NET Core</b> theo Clean Architecture, CQRS và DDD; thành thạo <b>PostgreSQL, Redis, RabbitMQ/MassTransit và SignalR</b>. Tự làm trọn vẹn nhiều service (chat đa kênh, HRM, quản lý câu lạc bộ, marketing) và tham gia mảng <b>bảo mật lõi nền tảng</b> — IAM, API Gateway và tích hợp thiết bị kiểm soát ra vào. Tư duy thực tế, chú trọng bảo mật, quen làm việc theo PR cùng test và CI/CD.</p>
+  </section>
+
+  <section>
+    <h2>Kỹ năng kỹ thuật</h2>
+    <ul class="skills">
+      <li><b>Ngôn ngữ:</b> C#, TypeScript, JavaScript, SQL</li>
+      <li><b>Backend / .NET:</b> ASP.NET Core Web API, EF Core, Clean Architecture, CQRS + pipeline behaviors, DDD, Result pattern, gRPC, SignalR (real-time)</li>
+      <li><b>Dữ liệu:</b> PostgreSQL 16 (Row-Level Security, JSONB, pgvector), Redis 7, EF Core; cô lập dữ liệu multi-tenant</li>
+      <li><b>Messaging / Bất đồng bộ:</b> RabbitMQ, MassTransit, Hangfire (background jobs)</li>
+      <li><b>Bảo mật:</b> JWT (RS256 / JWKS), OAuth2 / OIDC, Argon2id, AES-256-GCM, 2FA (TOTP), CSRF, rate limiting, RBAC, API key</li>
+      <li><b>Hạ tầng / DevOps:</b> Docker, YARP API Gateway, Serilog, OpenTelemetry, GitHub Packages (NuGet nội bộ), CI/CD, Git</li>
+      <li><b>Kiểm thử:</b> xUnit, NSubstitute, FluentAssertions, Testcontainers</li>
+      <li><b>Tích hợp:</b> Facebook Messenger, Zalo OA/Cá nhân, VNPay, Hikvision (ISAPI), OpenAI</li>
+      <li><b>Frontend (biết dùng):</b> ReactJS, Next.js, Tailwind CSS</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Kinh nghiệm làm việc</h2>
+
+    <div class="job">
+      <div class="job-h"><span class="t">NextX — Lập trình viên Backend .NET</span><span class="d">2024 – Hiện tại · Hà Nội</span></div>
+      <div class="ctx">Nền tảng SaaS multi-tenant gồm ~20 microservices .NET (Clean Architecture, shared-kernel dạng NuGet, PostgreSQL, RabbitMQ, gateway YARP, gRPC).</div>
+
+      <div class="sub">Service Communication (chat đa kênh) — phụ trách chính</div>
+      <ul class="bullets">
+        <li>Xây dựng hộp thư đa kênh hợp nhất <b>Facebook Messenger, Zalo OA/Cá nhân và widget chat web</b> (hơn 100 API), gửi/nhận tin nhắn real-time qua <b>SignalR</b>.</li>
+        <li>Triển khai <b>chatbot AI</b> dùng <b>pgvector</b> (cosine similarity) + GPT (RAG) để trả lời bám dữ liệu, hạn chế "bịa".</li>
+        <li>Thiết kế chia hội thoại cho agent bằng <b>smooth weighted round-robin</b>; nhận webhook trả <b>200 OK</b> ngay rồi xử lý <b>bất đồng bộ qua Hangfire</b>; mã hóa credential kênh khi lưu bằng <b>AES-256-GCM</b>.</li>
+      </ul>
+
+      <div class="sub">Bảo mật nền tảng — IAM, API Gateway, Operator</div>
+      <ul class="bullets">
+        <li>Tham gia service <b>IAM</b> (đăng nhập/xác thực, <b>JWT RS256 + JWKS</b>, băm mật khẩu <b>Argon2id</b>, <b>2FA TOTP</b>, RBAC nhóm/quyền, quản lý session) — hơn 80 endpoint.</li>
+        <li>Làm việc trên <b>API Gateway (YARP)</b>: pipeline middleware 12 bước gồm chặn giả mạo header, xác thực JWT / API key, <b>CSRF double-submit</b>, <b>rate limit sliding-window bằng Redis</b>, bơm claims và kiểm tra trạng thái workspace.</li>
+        <li>Đảm bảo <b>cô lập multi-tenant</b> bằng <b>Row-Level Security</b> của PostgreSQL + global query filter của EF Core.</li>
+      </ul>
+
+      <div class="sub">Service HRM &amp; Golf/Quản lý câu lạc bộ — phụ trách</div>
+      <ul class="bullets">
+        <li>Phát triển trọn vẹn service HRM và quản lý câu lạc bộ (domain → application → API): vòng đời nhân sự, gói hội viên/subscription, logic đặt lịch và trừ buổi.</li>
+      </ul>
+
+      <div class="sub">Tích hợp thiết bị kiểm soát ra vào (face / thẻ)</div>
+      <ul class="bullets">
+        <li>Tích hợp thiết bị <b>Hikvision</b> (thẻ + Face ID) qua <b>ISAPI</b> và <b>agent Electron giao tiếp SignalR</b>; thiết kế <b>xác thực phía server real-time</b> để chặn theo khung giờ booking, kèm <b>đối soát khi mất kết nối</b> và poll sự kiện để đảm bảo an toàn dữ liệu.</li>
+      </ul>
+
+      <div class="sub">Service Marketing</div>
+      <ul class="bullets">
+        <li>Xây dựng engine gửi chiến dịch hàng loạt qua <b>Email / SMS / Zalo ZNS</b> kèm automation workflow: enroll theo sự kiện bằng <b>MassTransit</b>, gửi theo lô bằng <b>Hangfire</b>, render email bằng <b>MJML</b>.</li>
+        <li><i>Quy trình:</i> làm việc theo PR, viết unit &amp; integration test (xUnit + Testcontainers), chuẩn lỗi RFC 7807, logging có cấu trúc và distributed tracing.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-h"><span class="t">FPT Software — Thực tập sinh Lập trình viên .NET</span><span class="d">05/2023 – 09/2023 · Hà Nội</span></div>
+      <ul class="bullets">
+        <li>Được đào tạo phát triển web .NET; làm tính năng và thực hành quy trình Agile, Git, debug, coding standards.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="edu">
+    <h2>Học vấn</h2>
+    <div class="job-h"><span class="t">Đại học FPT (Hòa Lạc) — Kỹ sư Kỹ thuật phần mềm</span><span class="d">Tốt nghiệp 2025</span></div>
+    <div class="ctx">Chuyên ngành: .NET Development</div>
+  </section>
+
+  <section>
+    <h2>Dự án cá nhân tiêu biểu</h2>
+    <ul class="bullets">
+      <li><b>AA Catering Management System</b> — đồ án tốt nghiệp; quản lý suất ăn công nghiệp. Next.js + ASP.NET Core, SignalR, xuất Excel, SQL Server, Docker.</li>
+      <li><b>FinTrack</b> — quản lý danh mục đầu tư chứng khoán. ReactJS + ASP.NET Core Web API, EF Core, JWT.</li>
+      <li><b>ShopBakery</b> — website thương mại điện tử tích hợp thanh toán <b>VNPay</b>. ASP.NET Core Razor Pages, EF Core.</li>
+    </ul>
+    <p class="note">GitHub: github.com/leanhluong</p>
+  </section>
+
+  <section>
+    <h2>Ngoại ngữ</h2>
+    <p>Tiếng Anh — Trung cấp (đọc/viết tài liệu kỹ thuật) &nbsp;·&nbsp; Tiếng Nhật — Cơ bản</p>
+  </section>
+</div>
+</body>
+</html>

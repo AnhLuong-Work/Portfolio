@@ -1,0 +1,17 @@
+{
+  "name": "leanhluong-portfolio",
+  "version": "1.0.0",
+  "private": true,
+    "_comment": "Folder 'Q&A' contains '&' which breaks npm's cmd .bin shim on Windows; call next via node directly.",
+  "scripts": {
+    "dev": "node node_modules/next/dist/bin/next dev",
+    "build": "node node_modules/next/dist/bin/next build",
+    "start": "node node_modules/next/dist/bin/next start",
+    "lint": "node node_modules/next/dist/bin/next lint"
+  },
+  "dependencies": {
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
