@@ -6,8 +6,8 @@ const PROFILE = {
   phone: "+84 976 564 969",
   github: "https://github.com/leanhluong",
   linkedin: "https://www.linkedin.com/in/anh-l%C6%B0%C6%A1ng-l%C3%AA-22a985370/",
-  cvEn: "/cv/CV_LeAnhLuong_EN.pdf",
-  cvVi: "/cv/CV_LeAnhLuong_VI.pdf",
+  cvEn: "/Le_Anh_Luong-DotNet-Backend-Resume.pdf",
+  cvVi: "/Le_Anh_Luong-Backend-CV-VI.pdf",
 };
 
 const SUMMARY =
