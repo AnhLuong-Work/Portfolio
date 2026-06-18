@@ -5,44 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lê Anh Lương — .NET Backend Developer</title>
 <style>
-  :root{ --ink:#1f2933; --muted:#5b6b7b; --accent:#0b6b5e; --line:#dfe6ec; --bg:#fff; }
+  :root{ --ink:#1a1a1a; --muted:#5f6b76; --line:#c8d0d8; --accent:#2f5d8a; }
   *{ box-sizing:border-box; margin:0; padding:0; }
   html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
   body{ font-family:"Segoe UI",-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
-    color:var(--ink); background:#eef1f4; font-size:10.3pt; line-height:1.45; }
-  .page{ max-width:210mm; min-height:297mm; margin:14px auto; background:var(--bg);
-    padding:16mm 15mm; box-shadow:0 2px 16px rgba(0,0,0,.12); }
-  header{ border-bottom:2.5px solid var(--accent); padding-bottom:10px; margin-bottom:14px; }
-  h1{ font-size:23pt; letter-spacing:.3px; color:var(--ink); }
-  .role{ font-size:11.5pt; font-weight:600; color:var(--accent); margin-top:2px; }
-  .contact{ margin-top:8px; font-size:9.3pt; color:var(--muted); line-height:1.7; }
+    color:var(--ink); background:#e9edf0; font-size:10.4pt; line-height:1.5; }
+  .page{ max-width:210mm; min-height:297mm; margin:14px auto; background:#fff;
+    padding:15mm 16mm; box-shadow:0 2px 16px rgba(0,0,0,.12); }
+  header{ margin-bottom:14px; }
+  h1{ font-size:25pt; font-weight:700; letter-spacing:.3px; }
+  .role{ text-transform:uppercase; letter-spacing:3px; color:var(--muted); font-size:11pt; font-weight:600; margin-top:3px; }
+  .contact{ margin-top:10px; font-size:9.3pt; color:var(--muted); line-height:1.75; }
   .contact a{ color:var(--muted); text-decoration:none; }
-  .contact b{ color:var(--ink); }
-  h2{ font-size:11pt; text-transform:uppercase; letter-spacing:1px; color:var(--accent);
-    margin:16px 0 7px; padding-bottom:3px; border-bottom:1px solid var(--line); }
-  section:first-of-type h2{ margin-top:4px; }
-  p.summary{ text-align:justify; color:#33414e; }
-  .skills{ list-style:none; }
-  .skills li{ margin:3px 0; padding-left:0; }
-  .skills b{ color:var(--ink); }
-  .job{ margin-bottom:11px; }
+  section{ margin-top:15px; }
+  h2{ text-transform:uppercase; letter-spacing:2px; font-size:11pt; font-weight:700; color:var(--ink); margin-bottom:8px; }
+  .body{ border-left:2px solid var(--line); padding-left:16px; }
+  p.summary{ text-align:justify; color:#2b3640; }
+  ul.skills{ list-style:none; }
+  ul.skills li{ margin:3px 0; }
+  .body b{ color:var(--ink); }
+  .job{ margin-bottom:11px; break-inside:avoid; }
   .job-h{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
-  .job-h .t{ font-weight:700; font-size:10.7pt; }
-  .job-h .d{ color:var(--muted); font-size:9pt; white-space:nowrap; font-style:italic; }
-  .job .ctx{ color:var(--muted); font-size:9.3pt; margin:1px 0 5px; }
-  .sub{ font-weight:600; color:var(--accent); margin:6px 0 2px; font-size:9.8pt; }
+  .job-h .t{ font-weight:700; font-size:10.6pt; }
+  .job-h .d{ color:var(--muted); font-size:9pt; font-style:italic; white-space:nowrap; }
+  .ctx{ color:var(--muted); font-size:9.3pt; margin:1px 0 6px; }
+  .sub{ font-weight:700; color:var(--accent); margin:7px 0 2px; font-size:9.9pt; }
   ul.bullets{ list-style:none; }
-  ul.bullets li{ position:relative; padding-left:13px; margin:2.5px 0; text-align:justify; }
-  ul.bullets li::before{ content:""; position:absolute; left:2px; top:7px; width:4px; height:4px;
-    background:var(--accent); border-radius:50%; }
-  .edu .t{ font-weight:700; }
-  .edu .d{ color:var(--muted); font-style:italic; font-size:9.3pt; }
-  .note{ color:var(--muted); font-size:9.3pt; font-style:italic; }
+  ul.bullets li{ position:relative; padding-left:14px; margin:2.5px 0; text-align:justify; }
+  ul.bullets li::before{ content:"▪"; position:absolute; left:0; top:1px; color:var(--accent); font-size:8pt; }
+  .note{ color:var(--muted); font-size:9.3pt; font-style:italic; margin-top:4px; }
   @media print{
     body{ background:#fff; font-size:10pt; }
-    .page{ margin:0; box-shadow:none; padding:12mm 14mm; max-width:none; min-height:auto; }
-    h2{ break-after:avoid; } .job,.edu li{ break-inside:avoid; }
-    @page{ size:A4; margin:0; }
+    .page{ margin:0; box-shadow:none; padding:11mm 13mm; max-width:none; min-height:auto; }
+    h2{ break-after:avoid; } @page{ size:A4; margin:0; }
   }
 </style>
 </head>
@@ -59,97 +54,109 @@
 
   <section>
     <h2>Summary</h2>
-    <p class="summary">Backend developer with ~2–3 years of experience building <b>production .NET microservices</b> for a multi-tenant SaaS platform (12+ services). Strong in <b>C# / ASP.NET Core</b> with Clean Architecture, CQRS and DDD; comfortable across <b>PostgreSQL, Redis, RabbitMQ/MassTransit, gRPC and SignalR</b>. Have shipped features across <b>commerce (Sales, CRM), fintech (online payment, e-invoice &amp; e-contract), communications and platform security</b> — including third-party integrations with <b>VNPay, BKAV and Viettel</b>. Pragmatic, security-minded, and used to PR-based teamwork with tests and CI/CD.</p>
+    <div class="body">
+      <p class="summary">Backend developer with ~2–3 years of experience building <b>production .NET microservices</b> for a multi-tenant SaaS platform (12+ services). Strong in <b>C# / ASP.NET Core</b> with Clean Architecture, CQRS and DDD; comfortable across <b>PostgreSQL, Redis, RabbitMQ/MassTransit, gRPC and SignalR</b>. Have shipped features across <b>commerce (Sales, CRM), fintech (online payment, e-invoice &amp; e-contract), communications, marketing and platform security</b> — part of <b>re-platforming a legacy PHP monolith into .NET</b> — including third-party integrations with <b>VNPay, BKAV, Viettel and Brevo</b>.</p>
+    </div>
   </section>
 
   <section>
     <h2>Technical Skills</h2>
-    <ul class="skills">
-      <li><b>Languages:</b> C#, TypeScript, JavaScript, SQL</li>
-      <li><b>Backend / .NET:</b> ASP.NET Core Web API, EF Core, Clean Architecture, CQRS + pipeline behaviors, DDD, Result pattern, gRPC, SignalR (real-time)</li>
-      <li><b>Data:</b> PostgreSQL 16 (Row-Level Security, JSONB, pgvector), Redis 7, EF Core; multi-tenant data isolation</li>
-      <li><b>Messaging / Async:</b> RabbitMQ, MassTransit, Hangfire background jobs</li>
-      <li><b>Security:</b> JWT (RS256 / JWKS), OAuth2 / OIDC, Argon2id, AES-256-GCM, 2FA (TOTP), CSRF, rate limiting, RBAC, API keys</li>
-      <li><b>Infra / DevOps:</b> Docker, YARP API Gateway, Serilog, OpenTelemetry, GitHub Packages (private NuGet), CI/CD, Git</li>
-      <li><b>Testing:</b> xUnit, NSubstitute, FluentAssertions, Testcontainers</li>
-      <li><b>Domains:</b> e-commerce / Sales, CRM, online payment, e-invoice &amp; e-contract, HRM, real-time chat</li>
-      <li><b>Integrations:</b> VNPay / VNPayQR / VietQR, BKAV &amp; Viettel (e-invoice / e-contract), Facebook Messenger, Zalo OA/Personal, Hikvision (ISAPI), OpenAI</li>
-      <li><b>Frontend (working):</b> ReactJS, Next.js, Tailwind CSS</li>
-    </ul>
+    <div class="body">
+      <ul class="skills">
+        <li><b>Languages:</b> C#, TypeScript, JavaScript, SQL</li>
+        <li><b>Backend / .NET:</b> ASP.NET Core Web API, EF Core, Clean Architecture, CQRS + pipeline behaviors, DDD, Result pattern, gRPC, SignalR</li>
+        <li><b>Data:</b> PostgreSQL 16 (Row-Level Security, JSONB, pgvector), Redis 7, EF Core; multi-tenant isolation</li>
+        <li><b>Messaging / Async:</b> RabbitMQ, MassTransit, Hangfire</li>
+        <li><b>Security:</b> JWT (RS256 / JWKS), OAuth2 / OIDC, Argon2id, AES-256-GCM, 2FA (TOTP), CSRF, rate limiting, RBAC, API keys</li>
+        <li><b>Infra / DevOps:</b> Docker, YARP API Gateway, Serilog, OpenTelemetry, GitHub Packages (NuGet), CI/CD, Git</li>
+        <li><b>Testing:</b> xUnit, NSubstitute, FluentAssertions, Testcontainers</li>
+        <li><b>Domains:</b> e-commerce / Sales, CRM, online payment, e-invoice &amp; e-contract, marketing &amp; notification, HRM / Gym, real-time chat, legacy PHP→.NET migration</li>
+        <li><b>Integrations:</b> VNPay / VNPayQR / VietQR, BKAV &amp; Viettel (e-invoice / e-contract), Brevo (email/SMS), Zalo ZNS, Facebook &amp; Zalo (incl. ZCA personal), Hikvision (ISAPI), FreePBX / Asterisk, OpenAI</li>
+        <li><b>Frontend (working):</b> ReactJS, Next.js, Tailwind CSS</li>
+      </ul>
+    </div>
   </section>
 
   <section>
     <h2>Professional Experience</h2>
+    <div class="body">
+      <div class="job">
+        <div class="job-h"><span class="t">NextX — .NET Backend Developer</span><span class="d">2024 – Present · Hà Nội</span></div>
+        <div class="ctx">Part of re-platforming a legacy PHP monolith into 12+ .NET microservices (Clean Architecture, shared-kernel NuGet, PostgreSQL, RabbitMQ, YARP gateway, gRPC).</div>
 
-    <div class="job">
-      <div class="job-h"><span class="t">NextX — .NET Backend Developer</span><span class="d">2024 – Present · Hà Nội</span></div>
-      <div class="ctx">Multi-tenant SaaS platform built as 12+ .NET microservices (Clean Architecture, shared-kernel NuGet, PostgreSQL, RabbitMQ, YARP gateway, gRPC).</div>
+        <div class="sub">Communication service (omni-channel chat) — primary owner</div>
+        <ul class="bullets">
+          <li>Built an omni-channel inbox unifying <b>Facebook Messenger, Zalo OA, Zalo Personal (a ZCA / zca-js Node bridge) and a web chat widget</b> (100+ API endpoints), real-time over <b>SignalR</b>.</li>
+          <li>Implemented an <b>AI chatbot</b> (<b>pgvector</b> + GPT RAG); integrated chat with <b>CRM and Sales over gRPC</b> (contact sync, product catalog).</li>
+          <li>Designed <b>smooth weighted round-robin</b> routing; webhooks via fast 200-OK + <b>async Hangfire</b>; channel credentials encrypted with <b>AES-256-GCM</b>.</li>
+        </ul>
 
-      <div class="sub">Communication service (omni-channel chat) — primary owner</div>
-      <ul class="bullets">
-        <li>Built an omni-channel inbox unifying <b>Facebook Messenger, Zalo OA/Personal and a web chat widget</b> (100+ API endpoints), with real-time delivery over <b>SignalR</b>.</li>
-        <li>Implemented an <b>AI chatbot</b> using <b>pgvector</b> cosine similarity + GPT (RAG) for grounded answers; integrated chat with <b>CRM and Sales over gRPC</b> (contact sync, product catalog).</li>
-        <li>Designed <b>smooth weighted round-robin</b> routing; webhooks ingested with a fast 200-OK + <b>async Hangfire</b> processing; channel credentials encrypted at rest with <b>AES-256-GCM</b>.</li>
-      </ul>
+        <div class="sub">Commerce — Sales &amp; CRM</div>
+        <ul class="bullets">
+          <li>Built parts of the <b>Sales</b> service (133 endpoints): orders, products/goods, inventory, <b>pricing &amp; promotions</b>, commission, cash book and <b>reports</b>.</li>
+          <li>Contributed to the <b>CRM</b> service: Lead, Contact, Opportunity, Quotation and analytics (~90 endpoints, gRPC-exposed).</li>
+        </ul>
 
-      <div class="sub">Commerce — Sales &amp; CRM</div>
-      <ul class="bullets">
-        <li>Built parts of the <b>Sales</b> service (133 endpoints): orders, products/goods, inventory, <b>pricing &amp; promotions</b>, commission, cash book and <b>reports</b>.</li>
-        <li>Contributed to the <b>CRM</b> service: Lead, Contact, Opportunity, Quotation and analytics (~90 endpoints, gRPC-exposed).</li>
-      </ul>
+        <div class="sub">Fintech — Payment, E-Invoice &amp; E-Contract</div>
+        <ul class="bullets">
+          <li>Built the <b>Payment</b> service for online payment via <b>VNPay, VNPayQR and VietQR</b> (QR generation, IPN callback handling, reconciliation).</li>
+          <li>Built the <b>E-Invoice</b> and <b>E-Contract</b> servers integrated with Vietnam providers <b>BKAV and Viettel</b>.</li>
+        </ul>
 
-      <div class="sub">Fintech — Payment, E-Invoice &amp; E-Contract</div>
-      <ul class="bullets">
-        <li>Built the <b>Payment</b> service for online payment via <b>VNPay, VNPayQR and VietQR</b> (QR generation, IPN callback handling, reconciliation).</li>
-        <li>Built the <b>E-Invoice</b> server and <b>E-Contract</b> (electronic invoice / contract) integrated with Vietnam providers <b>BKAV and Viettel</b>.</li>
-      </ul>
+        <div class="sub">Marketing &amp; Notification</div>
+        <ul class="bullets">
+          <li>Built a bulk-campaign engine across <b>Email/SMS (Brevo) and Zalo ZNS</b> — Brevo API client (sender verification, DKIM/SPF), <b>MassTransit</b> workflows, <b>Hangfire</b> batch sending, <b>MJML</b> rendering.</li>
+          <li>Built the <b>Notification</b> service (multi-channel notifications, exposed over gRPC).</li>
+        </ul>
 
-      <div class="sub">Platform security — IAM &amp; API Gateway</div>
-      <ul class="bullets">
-        <li>Contributed to <b>IAM</b> (<b>JWT RS256 + JWKS</b>, <b>Argon2id</b>, <b>2FA TOTP</b>, RBAC, sessions — 80+ endpoints) and the <b>YARP API Gateway</b> (12-step pipeline: header-spoofing guard, JWT/API-key auth, <b>CSRF double-submit</b>, <b>Redis sliding-window rate limiting</b>).</li>
-        <li>Enforced <b>multi-tenant isolation</b> via PostgreSQL <b>Row-Level Security</b> + EF Core global query filters.</li>
-      </ul>
+        <div class="sub">Platform security — IAM &amp; API Gateway</div>
+        <ul class="bullets">
+          <li>Built the <b>YARP API Gateway</b> (12-step pipeline: header-spoofing guard, JWT / API-key auth, <b>CSRF double-submit</b>, <b>Redis sliding-window rate limiting</b>) and contributed to <b>IAM</b> (<b>JWT RS256 + JWKS</b>, <b>Argon2id</b>, <b>2FA TOTP</b>, RBAC — 80+ endpoints).</li>
+          <li>Enforced <b>multi-tenant isolation</b> via PostgreSQL <b>Row-Level Security</b> + EF Core global query filters.</li>
+        </ul>
 
-      <div class="sub">HRM, Club management &amp; device integration</div>
-      <ul class="bullets">
-        <li>Delivered <b>HRM</b> and <b>golf/club-management</b> services end-to-end (membership/subscription, booking &amp; session deduction).</li>
-        <li>Integrated <b>Hikvision</b> access-control devices (card + Face ID) via <b>ISAPI</b> and an <b>Electron agent over SignalR</b>, with real-time server-side verification and offline reconciliation.</li>
-      </ul>
+        <div class="sub">Gym / HRM, devices &amp; legacy migration</div>
+        <ul class="bullets">
+          <li>Delivered <b>HRM</b>, <b>Gym</b> and <b>golf/club-management</b> services (membership/subscription, booking &amp; session deduction); integrated <b>Hikvision</b> devices (card + Face ID) via <b>ISAPI</b> + an <b>Electron agent over SignalR</b>.</li>
+          <li>Migrated and maintained <b>Gym and CRM modules from the legacy PHP system</b>, including <b>telephony / call integration (FreePBX + Asterisk)</b>.</li>
+          <li><i>Practices:</i> PR-based workflow, unit &amp; integration tests (xUnit + Testcontainers), RFC 7807 error contracts, structured logging and distributed tracing.</li>
+        </ul>
+      </div>
 
-      <div class="sub">Marketing service</div>
-      <ul class="bullets">
-        <li>Built a bulk-campaign engine across <b>Email / SMS / Zalo ZNS</b>: <b>MassTransit</b> event workflows, <b>Hangfire</b> batch sending, <b>MJML</b> rendering.</li>
-        <li><i>Practices:</i> PR-based workflow, unit &amp; integration tests (xUnit + Testcontainers), RFC 7807 error contracts, structured logging and distributed tracing.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-h"><span class="t">FPT Software — .NET Developer Intern</span><span class="d">May 2023 – Sep 2023 · Hà Nội</span></div>
-      <ul class="bullets">
-        <li>Trained in .NET web development; built features and practiced Agile workflow, Git, debugging and coding standards.</li>
-      </ul>
+      <div class="job">
+        <div class="job-h"><span class="t">FPT Software — .NET Developer Intern</span><span class="d">May 2023 – Sep 2023 · Hà Nội</span></div>
+        <ul class="bullets">
+          <li>Trained in .NET web development; built features and practiced Agile workflow, Git, debugging and coding standards.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section class="edu">
+  <section>
     <h2>Education</h2>
-    <div class="job-h"><span class="t">FPT University (Hòa Lạc) — B.E. in Software Engineering</span><span class="d">Graduated 2025</span></div>
-    <div class="ctx">Specialization: .NET Development</div>
+    <div class="body">
+      <div class="job-h"><span class="t">FPT University (Hòa Lạc) — B.E. in Software Engineering</span><span class="d">Graduated 2025</span></div>
+      <div class="ctx">Specialization: .NET Development</div>
+    </div>
   </section>
 
   <section>
     <h2>Selected Personal Projects</h2>
-    <ul class="bullets">
-      <li><b>AA Catering Management System</b> — graduation project; enterprise catering management. Next.js + ASP.NET Core, SignalR, Excel export, SQL Server, Docker.</li>
-      <li><b>FinTrack</b> — stock portfolio tracker. ReactJS + ASP.NET Core Web API, EF Core, JWT.</li>
-      <li><b>ShopBakery</b> — e-commerce site with <b>VNPay</b> payment. ASP.NET Core Razor Pages, EF Core.</li>
-    </ul>
-    <p class="note">GitHub: github.com/leanhluong</p>
+    <div class="body">
+      <ul class="bullets">
+        <li><b>AA Catering Management System</b> — graduation project; enterprise catering management. Next.js + ASP.NET Core, SignalR, Excel export, SQL Server, Docker.</li>
+        <li><b>FinTrack</b> — stock portfolio tracker. ReactJS + ASP.NET Core Web API, EF Core, JWT.</li>
+        <li><b>ShopBakery</b> — e-commerce site with <b>VNPay</b> payment. ASP.NET Core Razor Pages, EF Core.</li>
+      </ul>
+      <p class="note">GitHub: github.com/leanhluong</p>
+    </div>
   </section>
 
   <section>
     <h2>Languages</h2>
-    <p>English — Intermediate (technical reading &amp; writing) &nbsp;·&nbsp; Japanese — Basic</p>
+    <div class="body">
+      <p>English — Intermediate (technical reading &amp; writing) &nbsp;·&nbsp; Japanese — Basic</p>
+    </div>
   </section>
 </div>
 </body>

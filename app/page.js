@@ -11,7 +11,7 @@ const PROFILE = {
 };
 
 const SUMMARY =
-  "Backend developer with ~2–3 years of experience building production .NET microservices for a multi-tenant SaaS platform (12+ services). Strong in C# / ASP.NET Core with Clean Architecture, CQRS and DDD; comfortable across PostgreSQL, Redis, RabbitMQ/MassTransit, gRPC and SignalR. I have shipped features across commerce (Sales, CRM), fintech (online payment, e-invoice & e-contract), communications and platform security — including third-party integrations with VNPay, BKAV and Viettel.";
+  "Backend developer with ~2–3 years of experience building production .NET microservices for a multi-tenant SaaS platform (12+ services) — part of re-platforming a legacy PHP monolith to .NET. Strong in C# / ASP.NET Core with Clean Architecture, CQRS and DDD; comfortable across PostgreSQL, Redis, RabbitMQ/MassTransit, gRPC and SignalR. I have shipped features across commerce (Sales, CRM), fintech (online payment, e-invoice & e-contract), communications, marketing and platform security — including third-party integrations with VNPay, BKAV, Viettel and Brevo.";
 
 const SKILLS = [
   { group: "Languages", items: ["C#", "TypeScript", "JavaScript", "SQL"] },
@@ -33,11 +33,11 @@ const SKILLS = [
   },
   {
     group: "Integrations",
-    items: ["VNPay / VNPayQR / VietQR", "BKAV & Viettel (e-invoice)", "Facebook / Zalo", "Hikvision ISAPI", "OpenAI"],
+    items: ["VNPay / VNPayQR / VietQR", "BKAV & Viettel (e-invoice)", "Brevo (email/SMS)", "Zalo ZNS & ZCA", "Facebook", "Hikvision ISAPI", "FreePBX / Asterisk", "OpenAI"],
   },
   {
     group: "Domains",
-    items: ["Sales / e-commerce", "CRM", "Online payment", "E-invoice & e-contract", "HRM", "Real-time chat"],
+    items: ["Sales / e-commerce", "CRM", "Online payment", "E-invoice & e-contract", "Marketing & notification", "HRM / Gym", "Real-time chat", "Legacy PHP→.NET migration"],
   },
 ];
 
@@ -46,14 +46,14 @@ const EXPERIENCE = [
     pos: ".NET Backend Developer",
     co: "NextX",
     date: "2024 – Present · Hà Nội",
-    ctx: "Multi-tenant SaaS platform built as 12+ .NET microservices (Clean Architecture, shared-kernel NuGet, PostgreSQL, RabbitMQ, YARP gateway, gRPC).",
+    ctx: "Part of re-platforming a legacy PHP monolith into 12+ .NET microservices (Clean Architecture, shared-kernel NuGet, PostgreSQL, RabbitMQ, YARP gateway, gRPC).",
     bullets: [
-      "Primary owner of the omni-channel chat service: unified Facebook Messenger, Zalo OA/Personal and a web widget (100+ endpoints) with real-time delivery over SignalR; AI chatbot via pgvector + GPT (RAG).",
+      "Primary owner of the omni-channel chat service: unified Facebook Messenger, Zalo OA, Zalo Personal (a ZCA/zca-js Node bridge) and a web widget (100+ endpoints) with real-time delivery over SignalR; AI chatbot via pgvector + GPT (RAG); chat integrated with CRM & Sales over gRPC.",
       "Commerce: built parts of the Sales service (133 endpoints — orders, products, inventory, pricing & promotions, commission, reports) and contributed to CRM (Lead, Contact, Opportunity, Quotation, analytics).",
       "Fintech: built the Payment service (online payment via VNPay, VNPayQR and VietQR) plus the E-Invoice and E-Contract servers integrated with BKAV and Viettel.",
-      "Platform security: IAM (JWT RS256 + JWKS, Argon2id, 2FA TOTP, RBAC) and a YARP API Gateway (12-step pipeline: auth, CSRF, Redis rate limiting, header-spoofing guard); multi-tenant isolation via PostgreSQL RLS.",
-      "Delivered HRM and golf/club-management services end-to-end, and integrated Hikvision access-control devices (card + Face ID) via ISAPI + an Electron agent over SignalR.",
-      "Built a bulk marketing engine (Email/SMS/Zalo ZNS) with MassTransit workflows, Hangfire batch sending and MJML rendering.",
+      "Marketing & Notification: built a bulk-campaign engine across Email/SMS (Brevo) and Zalo ZNS — Brevo API client (sender verification, DKIM/SPF), MassTransit workflows, Hangfire, MJML — plus the Notification service.",
+      "Platform security: built the YARP API Gateway (12-step pipeline: auth, CSRF, Redis rate limiting, header-spoofing guard) and contributed to IAM (JWT RS256 + JWKS, Argon2id, 2FA TOTP, RBAC); multi-tenant isolation via PostgreSQL RLS.",
+      "Delivered HRM, Gym and golf/club-management services; integrated Hikvision devices (card + Face ID) via ISAPI + Electron over SignalR; migrated Gym & CRM modules from the legacy PHP system, incl. telephony (FreePBX + Asterisk).",
     ],
   },
   {
