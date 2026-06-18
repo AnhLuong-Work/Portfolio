@@ -11,7 +11,7 @@ const PROFILE = {
 };
 
 const SUMMARY =
-  "Backend developer with ~2–3 years of experience building production .NET microservices for a multi-tenant SaaS platform. Strong in C# / ASP.NET Core with Clean Architecture, CQRS and DDD; comfortable across PostgreSQL, Redis, RabbitMQ/MassTransit and SignalR. I have owned several services end-to-end and contributed to the core platform security — IAM, API Gateway and access-control device integration.";
+  "Backend developer with ~2–3 years of experience building production .NET microservices for a multi-tenant SaaS platform (12+ services). Strong in C# / ASP.NET Core with Clean Architecture, CQRS and DDD; comfortable across PostgreSQL, Redis, RabbitMQ/MassTransit, gRPC and SignalR. I have shipped features across commerce (Sales, CRM), fintech (online payment, e-invoice & e-contract), communications and platform security — including third-party integrations with VNPay, BKAV and Viettel.";
 
 const SKILLS = [
   { group: "Languages", items: ["C#", "TypeScript", "JavaScript", "SQL"] },
@@ -31,6 +31,14 @@ const SKILLS = [
     group: "Infra & Testing",
     items: ["Docker", "YARP Gateway", "Serilog", "OpenTelemetry", "xUnit", "Testcontainers", "CI/CD"],
   },
+  {
+    group: "Integrations",
+    items: ["VNPay / VNPayQR / VietQR", "BKAV & Viettel (e-invoice)", "Facebook / Zalo", "Hikvision ISAPI", "OpenAI"],
+  },
+  {
+    group: "Domains",
+    items: ["Sales / e-commerce", "CRM", "Online payment", "E-invoice & e-contract", "HRM", "Real-time chat"],
+  },
 ];
 
 const EXPERIENCE = [
@@ -38,14 +46,13 @@ const EXPERIENCE = [
     pos: ".NET Backend Developer",
     co: "NextX",
     date: "2024 – Present · Hà Nội",
-    ctx: "Multi-tenant SaaS platform built as ~20 .NET microservices (Clean Architecture, shared-kernel NuGet, PostgreSQL, RabbitMQ, YARP gateway, gRPC).",
+    ctx: "Multi-tenant SaaS platform built as 12+ .NET microservices (Clean Architecture, shared-kernel NuGet, PostgreSQL, RabbitMQ, YARP gateway, gRPC).",
     bullets: [
-      "Primary owner of the omni-channel chat service: unified Facebook Messenger, Zalo OA/Personal and a web widget (100+ endpoints) with real-time delivery over SignalR.",
-      "Built an AI chatbot using pgvector cosine similarity + GPT (RAG) for grounded, low-hallucination answers.",
-      "Contributed to platform security: IAM (JWT RS256 + JWKS, Argon2id, 2FA TOTP, RBAC) and a YARP API Gateway with a 12-step middleware pipeline (auth, CSRF, Redis rate limiting, header-spoofing guard).",
-      "Enforced multi-tenant isolation with PostgreSQL Row-Level Security + EF Core global query filters.",
-      "Delivered HRM and golf/club-management services end-to-end (membership/subscription, booking & session deduction).",
-      "Integrated Hikvision access-control devices (card + Face ID) via ISAPI and an Electron agent over SignalR, with real-time server-side verification and offline reconciliation.",
+      "Primary owner of the omni-channel chat service: unified Facebook Messenger, Zalo OA/Personal and a web widget (100+ endpoints) with real-time delivery over SignalR; AI chatbot via pgvector + GPT (RAG).",
+      "Commerce: built parts of the Sales service (133 endpoints — orders, products, inventory, pricing & promotions, commission, reports) and contributed to CRM (Lead, Contact, Opportunity, Quotation, analytics).",
+      "Fintech: built the Payment service (online payment via VNPay, VNPayQR and VietQR) plus the E-Invoice and E-Contract servers integrated with BKAV and Viettel.",
+      "Platform security: IAM (JWT RS256 + JWKS, Argon2id, 2FA TOTP, RBAC) and a YARP API Gateway (12-step pipeline: auth, CSRF, Redis rate limiting, header-spoofing guard); multi-tenant isolation via PostgreSQL RLS.",
+      "Delivered HRM and golf/club-management services end-to-end, and integrated Hikvision access-control devices (card + Face ID) via ISAPI + an Electron agent over SignalR.",
       "Built a bulk marketing engine (Email/SMS/Zalo ZNS) with MassTransit workflows, Hangfire batch sending and MJML rendering.",
     ],
   },

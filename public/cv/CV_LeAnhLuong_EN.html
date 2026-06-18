@@ -59,7 +59,7 @@
 
   <section>
     <h2>Summary</h2>
-    <p class="summary">Backend developer with ~2–3 years of experience building <b>production .NET microservices</b> for a multi-tenant SaaS platform. Strong in <b>C# / ASP.NET Core</b> with Clean Architecture, CQRS and DDD; comfortable across <b>PostgreSQL, Redis, RabbitMQ/MassTransit and SignalR</b>. Owned several services end-to-end (omni-channel chat, HRM, club management, marketing) and contributed to <b>core platform security</b> — IAM, API Gateway and access-control device integration. Pragmatic, security-minded, and used to PR-based teamwork with tests and CI/CD.</p>
+    <p class="summary">Backend developer with ~2–3 years of experience building <b>production .NET microservices</b> for a multi-tenant SaaS platform (12+ services). Strong in <b>C# / ASP.NET Core</b> with Clean Architecture, CQRS and DDD; comfortable across <b>PostgreSQL, Redis, RabbitMQ/MassTransit, gRPC and SignalR</b>. Have shipped features across <b>commerce (Sales, CRM), fintech (online payment, e-invoice &amp; e-contract), communications and platform security</b> — including third-party integrations with <b>VNPay, BKAV and Viettel</b>. Pragmatic, security-minded, and used to PR-based teamwork with tests and CI/CD.</p>
   </section>
 
   <section>
@@ -72,7 +72,8 @@
       <li><b>Security:</b> JWT (RS256 / JWKS), OAuth2 / OIDC, Argon2id, AES-256-GCM, 2FA (TOTP), CSRF, rate limiting, RBAC, API keys</li>
       <li><b>Infra / DevOps:</b> Docker, YARP API Gateway, Serilog, OpenTelemetry, GitHub Packages (private NuGet), CI/CD, Git</li>
       <li><b>Testing:</b> xUnit, NSubstitute, FluentAssertions, Testcontainers</li>
-      <li><b>Integrations:</b> Facebook Messenger, Zalo OA/Personal, VNPay, Hikvision (ISAPI), OpenAI</li>
+      <li><b>Domains:</b> e-commerce / Sales, CRM, online payment, e-invoice &amp; e-contract, HRM, real-time chat</li>
+      <li><b>Integrations:</b> VNPay / VNPayQR / VietQR, BKAV &amp; Viettel (e-invoice / e-contract), Facebook Messenger, Zalo OA/Personal, Hikvision (ISAPI), OpenAI</li>
       <li><b>Frontend (working):</b> ReactJS, Next.js, Tailwind CSS</li>
     </ul>
   </section>
@@ -82,35 +83,42 @@
 
     <div class="job">
       <div class="job-h"><span class="t">NextX — .NET Backend Developer</span><span class="d">2024 – Present · Hà Nội</span></div>
-      <div class="ctx">Multi-tenant SaaS platform built as ~20 .NET microservices (Clean Architecture, shared-kernel NuGet, PostgreSQL, RabbitMQ, YARP gateway, gRPC).</div>
+      <div class="ctx">Multi-tenant SaaS platform built as 12+ .NET microservices (Clean Architecture, shared-kernel NuGet, PostgreSQL, RabbitMQ, YARP gateway, gRPC).</div>
 
       <div class="sub">Communication service (omni-channel chat) — primary owner</div>
       <ul class="bullets">
-        <li>Built an omni-channel inbox unifying <b>Facebook Messenger, Zalo OA/Personal and a web chat widget</b> (100+ API endpoints), with real-time message delivery over <b>SignalR</b>.</li>
-        <li>Implemented an <b>AI chatbot</b> using <b>pgvector</b> cosine similarity + GPT (RAG) for grounded, low-hallucination answers.</li>
-        <li>Designed <b>smooth weighted round-robin</b> agent routing; ingested provider webhooks with a fast 200-OK + <b>async Hangfire</b> processing; encrypted channel credentials at rest with <b>AES-256-GCM</b>.</li>
+        <li>Built an omni-channel inbox unifying <b>Facebook Messenger, Zalo OA/Personal and a web chat widget</b> (100+ API endpoints), with real-time delivery over <b>SignalR</b>.</li>
+        <li>Implemented an <b>AI chatbot</b> using <b>pgvector</b> cosine similarity + GPT (RAG) for grounded answers; integrated chat with <b>CRM and Sales over gRPC</b> (contact sync, product catalog).</li>
+        <li>Designed <b>smooth weighted round-robin</b> routing; webhooks ingested with a fast 200-OK + <b>async Hangfire</b> processing; channel credentials encrypted at rest with <b>AES-256-GCM</b>.</li>
       </ul>
 
-      <div class="sub">Platform security — IAM, API Gateway, Operator</div>
+      <div class="sub">Commerce — Sales &amp; CRM</div>
       <ul class="bullets">
-        <li>Contributed to the <b>IAM</b> service (authentication, <b>JWT RS256 + JWKS</b>, <b>Argon2id</b> password hashing, <b>2FA TOTP</b>, RBAC groups/permissions, sessions) — 80+ endpoints.</li>
-        <li>Worked on the <b>YARP API Gateway</b>: a 12-step middleware pipeline incl. header-spoofing guard, JWT / API-key validation, <b>CSRF double-submit</b>, <b>Redis sliding-window rate limiting</b>, claims injection and workspace-status checks.</li>
+        <li>Built parts of the <b>Sales</b> service (133 endpoints): orders, products/goods, inventory, <b>pricing &amp; promotions</b>, commission, cash book and <b>reports</b>.</li>
+        <li>Contributed to the <b>CRM</b> service: Lead, Contact, Opportunity, Quotation and analytics (~90 endpoints, gRPC-exposed).</li>
+      </ul>
+
+      <div class="sub">Fintech — Payment, E-Invoice &amp; E-Contract</div>
+      <ul class="bullets">
+        <li>Built the <b>Payment</b> service for online payment via <b>VNPay, VNPayQR and VietQR</b> (QR generation, IPN callback handling, reconciliation).</li>
+        <li>Built the <b>E-Invoice</b> server and <b>E-Contract</b> (electronic invoice / contract) integrated with Vietnam providers <b>BKAV and Viettel</b>.</li>
+      </ul>
+
+      <div class="sub">Platform security — IAM &amp; API Gateway</div>
+      <ul class="bullets">
+        <li>Contributed to <b>IAM</b> (<b>JWT RS256 + JWKS</b>, <b>Argon2id</b>, <b>2FA TOTP</b>, RBAC, sessions — 80+ endpoints) and the <b>YARP API Gateway</b> (12-step pipeline: header-spoofing guard, JWT/API-key auth, <b>CSRF double-submit</b>, <b>Redis sliding-window rate limiting</b>).</li>
         <li>Enforced <b>multi-tenant isolation</b> via PostgreSQL <b>Row-Level Security</b> + EF Core global query filters.</li>
       </ul>
 
-      <div class="sub">HRM &amp; Golf/Club management services — owner</div>
+      <div class="sub">HRM, Club management &amp; device integration</div>
       <ul class="bullets">
-        <li>Delivered HRM and club-management services end-to-end (domain → application → API): employee lifecycle, membership/subscription, booking and session-deduction logic.</li>
-      </ul>
-
-      <div class="sub">Access-control device integration (face / card)</div>
-      <ul class="bullets">
-        <li>Integrated <b>Hikvision</b> access-control devices (card + Face ID) via <b>ISAPI</b> and an <b>Electron agent over SignalR</b>; designed real-time <b>server-side verification</b> to gate bookings by time window, plus <b>offline reconciliation</b> and event polling for resilience.</li>
+        <li>Delivered <b>HRM</b> and <b>golf/club-management</b> services end-to-end (membership/subscription, booking &amp; session deduction).</li>
+        <li>Integrated <b>Hikvision</b> access-control devices (card + Face ID) via <b>ISAPI</b> and an <b>Electron agent over SignalR</b>, with real-time server-side verification and offline reconciliation.</li>
       </ul>
 
       <div class="sub">Marketing service</div>
       <ul class="bullets">
-        <li>Built a bulk-campaign engine across <b>Email / SMS / Zalo ZNS</b> with automation workflows: <b>MassTransit</b> event-driven enrollment, <b>Hangfire</b> batch sending, and <b>MJML</b> email rendering.</li>
+        <li>Built a bulk-campaign engine across <b>Email / SMS / Zalo ZNS</b>: <b>MassTransit</b> event workflows, <b>Hangfire</b> batch sending, <b>MJML</b> rendering.</li>
         <li><i>Practices:</i> PR-based workflow, unit &amp; integration tests (xUnit + Testcontainers), RFC 7807 error contracts, structured logging and distributed tracing.</li>
       </ul>
     </div>

@@ -58,7 +58,7 @@
 
   <section>
     <h2>Giới thiệu</h2>
-    <p class="summary">Lập trình viên Backend với khoảng <b>2–3 năm kinh nghiệm</b> xây dựng <b>hệ thống microservices .NET chạy production</b> cho nền tảng SaaS đa khách hàng (multi-tenant). Vững <b>C# / ASP.NET Core</b> theo Clean Architecture, CQRS và DDD; thành thạo <b>PostgreSQL, Redis, RabbitMQ/MassTransit và SignalR</b>. Tự làm trọn vẹn nhiều service (chat đa kênh, HRM, quản lý câu lạc bộ, marketing) và tham gia mảng <b>bảo mật lõi nền tảng</b> — IAM, API Gateway và tích hợp thiết bị kiểm soát ra vào. Tư duy thực tế, chú trọng bảo mật, quen làm việc theo PR cùng test và CI/CD.</p>
+    <p class="summary">Lập trình viên Backend với khoảng <b>2–3 năm kinh nghiệm</b> xây dựng <b>hệ thống microservices .NET chạy production</b> cho nền tảng SaaS đa khách hàng (12+ service). Vững <b>C# / ASP.NET Core</b> theo Clean Architecture, CQRS và DDD; thành thạo <b>PostgreSQL, Redis, RabbitMQ/MassTransit, gRPC và SignalR</b>. Đã làm tính năng trải khắp các mảng <b>thương mại (Sales, CRM), fintech (thanh toán online, hóa đơn &amp; hợp đồng điện tử), giao tiếp đa kênh và bảo mật nền tảng</b> — gồm tích hợp bên thứ ba với <b>VNPay, BKAV và Viettel</b>. Tư duy thực tế, chú trọng bảo mật, quen làm việc theo PR cùng test và CI/CD.</p>
   </section>
 
   <section>
@@ -71,7 +71,8 @@
       <li><b>Bảo mật:</b> JWT (RS256 / JWKS), OAuth2 / OIDC, Argon2id, AES-256-GCM, 2FA (TOTP), CSRF, rate limiting, RBAC, API key</li>
       <li><b>Hạ tầng / DevOps:</b> Docker, YARP API Gateway, Serilog, OpenTelemetry, GitHub Packages (NuGet nội bộ), CI/CD, Git</li>
       <li><b>Kiểm thử:</b> xUnit, NSubstitute, FluentAssertions, Testcontainers</li>
-      <li><b>Tích hợp:</b> Facebook Messenger, Zalo OA/Cá nhân, VNPay, Hikvision (ISAPI), OpenAI</li>
+      <li><b>Lĩnh vực:</b> thương mại điện tử / Sales, CRM, thanh toán online, hóa đơn &amp; hợp đồng điện tử, HRM, chat real-time</li>
+      <li><b>Tích hợp:</b> VNPay / VNPayQR / VietQR, BKAV &amp; Viettel (hóa đơn / hợp đồng điện tử), Facebook Messenger, Zalo OA/Cá nhân, Hikvision (ISAPI), OpenAI</li>
       <li><b>Frontend (biết dùng):</b> ReactJS, Next.js, Tailwind CSS</li>
     </ul>
   </section>
@@ -81,35 +82,42 @@
 
     <div class="job">
       <div class="job-h"><span class="t">NextX — Lập trình viên Backend .NET</span><span class="d">2024 – Hiện tại · Hà Nội</span></div>
-      <div class="ctx">Nền tảng SaaS multi-tenant gồm ~20 microservices .NET (Clean Architecture, shared-kernel dạng NuGet, PostgreSQL, RabbitMQ, gateway YARP, gRPC).</div>
+      <div class="ctx">Nền tảng SaaS multi-tenant gồm 12+ microservices .NET (Clean Architecture, shared-kernel dạng NuGet, PostgreSQL, RabbitMQ, gateway YARP, gRPC).</div>
 
       <div class="sub">Service Communication (chat đa kênh) — phụ trách chính</div>
       <ul class="bullets">
-        <li>Xây dựng hộp thư đa kênh hợp nhất <b>Facebook Messenger, Zalo OA/Cá nhân và widget chat web</b> (hơn 100 API), gửi/nhận tin nhắn real-time qua <b>SignalR</b>.</li>
-        <li>Triển khai <b>chatbot AI</b> dùng <b>pgvector</b> (cosine similarity) + GPT (RAG) để trả lời bám dữ liệu, hạn chế "bịa".</li>
-        <li>Thiết kế chia hội thoại cho agent bằng <b>smooth weighted round-robin</b>; nhận webhook trả <b>200 OK</b> ngay rồi xử lý <b>bất đồng bộ qua Hangfire</b>; mã hóa credential kênh khi lưu bằng <b>AES-256-GCM</b>.</li>
+        <li>Xây dựng hộp thư đa kênh hợp nhất <b>Facebook Messenger, Zalo OA/Cá nhân và widget chat web</b> (hơn 100 API), real-time qua <b>SignalR</b>.</li>
+        <li>Triển khai <b>chatbot AI</b> dùng <b>pgvector</b> + GPT (RAG) để trả lời bám dữ liệu; <b>tích hợp chat với CRM và Sales qua gRPC</b> (đồng bộ contact, danh mục sản phẩm).</li>
+        <li>Chia hội thoại cho agent bằng <b>smooth weighted round-robin</b>; webhook trả <b>200 OK</b> ngay rồi xử lý <b>bất đồng bộ qua Hangfire</b>; mã hóa credential kênh bằng <b>AES-256-GCM</b>.</li>
       </ul>
 
-      <div class="sub">Bảo mật nền tảng — IAM, API Gateway, Operator</div>
+      <div class="sub">Thương mại — Sales &amp; CRM</div>
       <ul class="bullets">
-        <li>Tham gia service <b>IAM</b> (đăng nhập/xác thực, <b>JWT RS256 + JWKS</b>, băm mật khẩu <b>Argon2id</b>, <b>2FA TOTP</b>, RBAC nhóm/quyền, quản lý session) — hơn 80 endpoint.</li>
-        <li>Làm việc trên <b>API Gateway (YARP)</b>: pipeline middleware 12 bước gồm chặn giả mạo header, xác thực JWT / API key, <b>CSRF double-submit</b>, <b>rate limit sliding-window bằng Redis</b>, bơm claims và kiểm tra trạng thái workspace.</li>
+        <li>Xây dựng một phần service <b>Sales</b> (133 endpoint): đơn hàng, <b>hàng hóa/sản phẩm</b>, tồn kho, <b>bảng giá &amp; khuyến mãi</b>, hoa hồng, sổ quỹ và <b>báo cáo</b>.</li>
+        <li>Tham gia service <b>CRM</b>: Lead, Contact, Opportunity, Quotation và analytics (~90 endpoint, expose gRPC).</li>
+      </ul>
+
+      <div class="sub">Fintech — Payment, Hóa đơn &amp; Hợp đồng điện tử</div>
+      <ul class="bullets">
+        <li>Xây dựng service <b>Payment</b> thanh toán online qua <b>VNPay, VNPayQR và VietQR</b> (sinh mã QR, xử lý callback IPN, đối soát).</li>
+        <li>Xây dựng server <b>Hóa đơn điện tử</b> và <b>Hợp đồng điện tử</b> tích hợp nhà cung cấp <b>BKAV và Viettel</b>.</li>
+      </ul>
+
+      <div class="sub">Bảo mật nền tảng — IAM &amp; API Gateway</div>
+      <ul class="bullets">
+        <li>Tham gia <b>IAM</b> (<b>JWT RS256 + JWKS</b>, <b>Argon2id</b>, <b>2FA TOTP</b>, RBAC, session — hơn 80 endpoint) và <b>API Gateway (YARP)</b> (pipeline 12 bước: chặn giả mạo header, xác thực JWT/API key, <b>CSRF double-submit</b>, <b>rate limit sliding-window bằng Redis</b>).</li>
         <li>Đảm bảo <b>cô lập multi-tenant</b> bằng <b>Row-Level Security</b> của PostgreSQL + global query filter của EF Core.</li>
       </ul>
 
-      <div class="sub">Service HRM &amp; Golf/Quản lý câu lạc bộ — phụ trách</div>
+      <div class="sub">HRM, Quản lý câu lạc bộ &amp; tích hợp thiết bị</div>
       <ul class="bullets">
-        <li>Phát triển trọn vẹn service HRM và quản lý câu lạc bộ (domain → application → API): vòng đời nhân sự, gói hội viên/subscription, logic đặt lịch và trừ buổi.</li>
-      </ul>
-
-      <div class="sub">Tích hợp thiết bị kiểm soát ra vào (face / thẻ)</div>
-      <ul class="bullets">
-        <li>Tích hợp thiết bị <b>Hikvision</b> (thẻ + Face ID) qua <b>ISAPI</b> và <b>agent Electron giao tiếp SignalR</b>; thiết kế <b>xác thực phía server real-time</b> để chặn theo khung giờ booking, kèm <b>đối soát khi mất kết nối</b> và poll sự kiện để đảm bảo an toàn dữ liệu.</li>
+        <li>Phát triển trọn vẹn service <b>HRM</b> và <b>golf/quản lý câu lạc bộ</b> (gói hội viên/subscription, đặt lịch &amp; trừ buổi).</li>
+        <li>Tích hợp thiết bị <b>Hikvision</b> (thẻ + Face ID) qua <b>ISAPI</b> và <b>agent Electron giao tiếp SignalR</b>, xác thực phía server real-time kèm đối soát khi mất kết nối.</li>
       </ul>
 
       <div class="sub">Service Marketing</div>
       <ul class="bullets">
-        <li>Xây dựng engine gửi chiến dịch hàng loạt qua <b>Email / SMS / Zalo ZNS</b> kèm automation workflow: enroll theo sự kiện bằng <b>MassTransit</b>, gửi theo lô bằng <b>Hangfire</b>, render email bằng <b>MJML</b>.</li>
+        <li>Xây dựng engine gửi chiến dịch hàng loạt qua <b>Email / SMS / Zalo ZNS</b>: workflow sự kiện <b>MassTransit</b>, gửi theo lô <b>Hangfire</b>, render email <b>MJML</b>.</li>
         <li><i>Quy trình:</i> làm việc theo PR, viết unit &amp; integration test (xUnit + Testcontainers), chuẩn lỗi RFC 7807, logging có cấu trúc và distributed tracing.</li>
       </ul>
     </div>
