@@ -3,7 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "Lê Anh Lương — .NET Backend Developer",
   description:
-    "Backend developer with ~2–3 years building production .NET microservices: Clean Architecture, PostgreSQL, RabbitMQ, SignalR, API security and device integration.",
+    "Backend developer with 2.5 years building production .NET microservices: Clean Architecture, PostgreSQL, RabbitMQ, SignalR, a self-hosted RAG stack and an MCP server for AI assistants.",
   openGraph: {
     title: "Lê Anh Lương — .NET Backend Developer",
     description:

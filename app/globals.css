@@ -130,6 +130,26 @@ h2.sec-title { font-size: 26px; margin-bottom: 26px; }
 .proj .stack span { font-size: 12px; color: var(--muted); border: 1px solid var(--line); padding: 3px 8px; border-radius: 6px; }
 .proj .link { margin-top: 12px; font-size: 13px; color: var(--accent); }
 
+/* ---------- systems / services ---------- */
+.systems { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 820px){ .systems { grid-template-columns: 1fr; } }
+.sys {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px 22px; transition: .2s; display: flex; flex-direction: column;
+}
+.sys:hover { border-color: var(--accent); transform: translateY(-3px); }
+.sys.feat { grid-column: 1 / -1; border-color: rgba(45,212,191,.4);
+  background: linear-gradient(180deg, rgba(45,212,191,.06), transparent 60%), var(--card); }
+.sys .sh { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.sys .st { font-weight: 700; font-size: 16px; }
+.sys .sr { color: var(--accent); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.sys .repo { color: var(--muted); font-size: 12px; font-family: ui-monospace, "Cascadia Code", Consolas, monospace; margin: 2px 0 8px; }
+.sys ul { list-style: none; display: grid; gap: 6px; margin: 4px 0 12px; }
+.sys ul li { position: relative; padding-left: 18px; color: #c4d2de; font-size: 14px; }
+.sys ul li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+.sys .stack { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.sys .stack span { font-size: 12px; color: var(--muted); border: 1px solid var(--line); padding: 3px 8px; border-radius: 6px; }
+
 /* ---------- two-col small ---------- */
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 @media (max-width: 720px){ .duo { grid-template-columns: 1fr; } }

@@ -30,7 +30,7 @@ Màu sắc/giao diện ở **`app/globals.css`** (biến `--accent` để đổi
 ## CV / PDF
 
 Đặt trong `public/cv/` (đã có sẵn):
-- `CV_LeAnhLuong_EN.pdf`, `CV_LeAnhLuong_VI.pdf` — nút "Download CV"
+- `LeAnhLuong_BackendDotNet_CV_EN.pdf`, `LeAnhLuong_BackendDotNet_CV_VI.pdf` — nút "Download CV"
 - bản `.html` tương ứng (tùy chọn)
 
 Khi cập nhật CV: sửa file HTML trong thư mục `CV/` ở gốc dự án → in lại PDF →

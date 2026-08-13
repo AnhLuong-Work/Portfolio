@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lê Anh Lương — Backend Developer (.NET) · AI/LLM</title>
+<style>
+  :root{
+    --ink:#2f2f2f; --soft:#4a4a4a; --muted:#7b7b7b; --line:#d4d4d4;
+    --fs:9.7pt; --lh:1.42;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{
+    font-family:"Segoe UI","Lato","Open Sans",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+    color:var(--ink); background:#e9edf0; font-size:var(--fs); line-height:var(--lh);
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .page{ width:210mm; min-height:297mm; margin:14px auto; background:#fff;
+    padding:14mm 16mm; box-shadow:0 2px 16px rgba(0,0,0,.12); }
+
+  /* ---------- header: căn giữa, đơn sắc ---------- */
+  header{ text-align:center; margin-bottom:12px; }
+  h1{ font-size:21pt; font-weight:600; letter-spacing:.3px; line-height:1.15; color:#1a1a1a; }
+  .role{ text-transform:uppercase; letter-spacing:1.4px; color:var(--muted);
+    font-size:9.2pt; font-weight:400; margin-top:5px; }
+  .contact{ margin-top:9px; font-size:8.9pt; color:var(--soft); }
+  .contact .row{ display:flex; justify-content:center; flex-wrap:wrap; gap:16px; margin-top:3px; }
+  .contact span.i{ display:inline-flex; align-items:center; gap:4px; white-space:nowrap; }
+  .contact svg{ width:9px; height:9px; fill:var(--muted); flex:none; position:relative; top:.5px; }
+  .contact a{ color:var(--soft); text-decoration:none; }
+  .contact b{ color:var(--soft); font-weight:400; }
+
+  /* ---------- section ---------- */
+  section{ margin-top:10px; }
+  h2{ text-transform:uppercase; letter-spacing:.7px; font-size:10pt; font-weight:400;
+    color:#3a3a3a; margin-bottom:5px; }
+
+  /* đường kẻ dọc mảnh bên trái khối nội dung — đặc trưng form ResumeKraft */
+  p.summary, ul.skills, .job, .edu{
+    border-left:1px solid var(--line); padding-left:14px; margin-left:1px;
+  }
+  p.summary{ text-align:left; }
+  b{ color:inherit; font-weight:600; }
+
+  ul.skills{ list-style:none; }
+  ul.skills li{ position:relative; padding-left:12px; margin:2.5px 0; }
+  ul.skills li::before{ content:"•"; position:absolute; left:0; top:-.5px; color:#8a8a8a; }
+  ul.skills li > span.k{ font-weight:700; color:#1f1f1f; }
+
+  /* ---------- job ---------- */
+  .job-h{ margin-bottom:1px; }
+  .job-h .t{ font-weight:700; font-size:10.2pt; color:#1f1f1f; line-height:1.25; }
+  .job-h .org{ margin-top:1px; }
+  .job-h .org b{ font-weight:700; font-size:10pt; color:#1a1a1a; }
+  .job-h .d{ color:var(--muted); font-size:8.7pt; font-style:italic; margin-left:8px; }
+  .ctx{ color:var(--soft); font-size:8.9pt; margin:3px 0 5px; }
+  .phase{ font-weight:700; color:#1f1f1f; margin:6px 0 2px; font-size:9.3pt; }
+  .sub{ font-weight:700; color:#1f1f1f; margin:6px 0 2px; font-size:9.3pt; }
+  ul.bullets{ list-style:none; }
+  ul.bullets li{ position:relative; padding-left:12px; margin:2px 0; }
+  ul.bullets li::before{ content:"•"; position:absolute; left:0; top:-.5px; color:#8a8a8a; }
+  .prev{ color:var(--muted); font-size:8.7pt; font-style:italic; margin-top:6px; }
+  .job + .job{ margin-top:8px; }
+  .job-h, .phase, .sub{ break-after:avoid; }
+  ul.bullets li{ break-inside:avoid; }
+  .edu div{ margin:2.5px 0; }
+
+  @media print{
+    body{ background:#fff; }
+    .page{ margin:0; box-shadow:none; width:auto; min-height:auto; padding:9mm 12mm; }
+    @page{ size:A4; margin:0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Lê Anh Lương</h1>
+    <div class="role">Backend Developer (.NET) · AI / LLM</div>
+    <div class="contact">
+      <div class="row">
+        <span class="i"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2l-8 5-8-5V6l8 5 8-5v2.2z"/></svg><a href="mailto:leanhluong0110@gmail.com">leanhluong0110@gmail.com</a></span>
+        <span class="i"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>0976 564 969</span>
+        <span class="i"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Hà Nội</span>
+      </div>
+      <div class="row">
+        <span class="i"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.5 8.65 21 11.1 21 14.2V21h-4v-6c0-1.4-.03-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9z"/></svg><a href="https://www.linkedin.com/in/anh-l%C6%B0%C6%A1ng-l%C3%AA-22a985370/">linkedin.com/in/anh-luong-le</a></span>
+        <span class="i"><svg viewBox="0 0 24 24"><path d="M12 1.5A10.5 10.5 0 0 0 8.7 22c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.3-3.5-1.3-.5-1.2-1.2-1.6-1.2-1.6-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.2.4-2.1 1.1-2.8-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.3 0c2-1.4 2.9-1.1 2.9-1.1.6 1.5.2 2.6.1 2.9.7.7 1.1 1.6 1.1 2.8 0 4-2.5 4.9-4.8 5.2.4.3.7 1 .7 2v2.9c0 .3.2.6.7.5A10.5 10.5 0 0 0 12 1.5z"/></svg><a href="https://github.com/leanhluong">github.com/leanhluong</a></span>
+        <span class="i"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-2.9a15.6 15.6 0 0 0-1.3-3.4A8 8 0 0 1 18.9 8zM12 4c.8 1.1 1.4 2.4 1.8 4h-3.6c.4-1.6 1-2.9 1.8-4zM4.3 14a8 8 0 0 1 0-4h3.3a17 17 0 0 0 0 4zm.8 2h2.9c.3 1.2.8 2.4 1.3 3.4A8 8 0 0 1 5.1 16zm2.9-8H5.1a8 8 0 0 1 4.2-3.4A15.6 15.6 0 0 0 8 8zM12 20c-.8-1.1-1.4-2.4-1.8-4h3.6c-.4 1.6-1 2.9-1.8 4zm2.2-6H9.8a15 15 0 0 1 0-4h4.4a15 15 0 0 1 0 4zm.5 5.4c.5-1 1-2.2 1.3-3.4h2.9a8 8 0 0 1-4.2 3.4zM16.4 14a17 17 0 0 0 0-4h3.3a8 8 0 0 1 0 4z"/></svg><a href="https://leanhluong.vercel.app">leanhluong.vercel.app</a></span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Giới thiệu</h2>
+    <p class="summary">Backend Developer 2,5 năm kinh nghiệm .NET, phát triển hệ thống microservice cho nền tảng SaaS multi-tenant trong team backend 8 người. Làm chủ end-to-end chat đa kênh và backend tổng đài, phát triển chính marketing &amp; notification và HRM; tích hợp thanh toán &amp; hóa đơn điện tử — và thiết kế các pattern dùng chung trên shared kernel để các service trong nền tảng tái sử dụng, đồng nhất. Tự thiết kế &amp; vận hành hạ tầng Generative AI nội bộ: pipeline RAG chạy LLM + embedding trên GPU công ty — dữ liệu khách hàng không rời hệ thống, không phụ thuộc chi phí API cloud.</p>
+  </section>
+
+  <section>
+    <h2>Kỹ năng kỹ thuật</h2>
+    <ul class="skills">
+      <li><span class="k">Ngôn ngữ &amp; Backend:</span> C#, SQL, .NET 10 / ASP.NET Core, EF Core, gRPC, SignalR</li>
+      <li><span class="k">Kiến trúc:</span> Microservices, Clean Architecture, DDD, CQRS (MediatR), multi-tenant RLS, API Gateway (YARP)</li>
+      <li><span class="k">Messaging &amp; bất đồng bộ:</span> RabbitMQ / MassTransit, event-driven (outbox, idempotency key), Hangfire (background &amp; scheduled job), xử lý webhook async</li>
+      <li><span class="k">AI / LLM:</span> RAG (pgvector + embedding + LLM), self-host inference (vLLM + Qwen2.5-7B, HF TEI + bge-m3), abstraction OpenAI-compatible (self-host ↔ cloud bằng config), function calling, multi-turn context, phân loại intent, speech-to-text, MCP (Model Context Protocol)</li>
+      <li><span class="k">Dữ liệu &amp; hạ tầng:</span> PostgreSQL 16 (JSONB, pgvector), Redis 7, Meilisearch, Docker, MinIO, Serilog + OpenTelemetry, CI/CD</li>
+      <li><span class="k">Tích hợp:</span> VNPay / VNPayQR / VietQR, BKAV &amp; Viettel (hoá đơn &amp; hợp đồng điện tử), Brevo (email/SMS), Zalo ZNS, Facebook Messenger, Instagram, Zalo OA, Hikvision / ZKTeco (ISAPI), FreePBX / Asterisk</li>
+      <li><span class="k">Bảo mật:</span> JWT RS256 / JWKS, OAuth2, Argon2id, AES-256-GCM, 2FA TOTP, RBAC, rate limiting</li>
+      <li><span class="k">Kiểm thử:</span> unit &amp; integration test (xUnit) &nbsp;·&nbsp; <span class="k">Khác:</span> TypeScript, Next.js / React, Node.js, Electron</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Kinh nghiệm làm việc</h2>
+
+    <div class="job">
+      <div class="job-h"><div class="t">Backend Developer (.NET)</div><div class="org"><b>Công ty Cổ phần Tương Lai NextX</b><span class="d">04/2024 – Hiện tại · Hà Nội</span></div></div>
+      <div class="ctx">Nền tảng SaaS quản trị doanh nghiệp multi-tenant, phát triển trong team backend 8 người. Bắt đầu bằng phát triển tính năng &amp; bảo trì trên hệ thống đang vận hành, sau đó cùng team rebuild nền tảng sang kiến trúc microservice .NET 10 trên shared kernel dùng chung.</div>
+
+      <div class="phase">Từ 11/2025 · Rebuild nền tảng sang microservice (.NET 10)</div>
+      <div class="ctx">Port nghiệp vụ từ hệ thống legacy PHP đang vận hành sang thiết kế Clean Architecture trên schema dữ liệu sẵn có; xây microservice trên shared kernel đóng gói NuGet nội bộ.</div>
+
+      <div class="sub">AI Chatbot (RAG) — thiết kế &amp; vận hành toàn bộ</div>
+      <ul class="bullets">
+        <li>Xây engine RAG: sinh embedding cho tri thức nghiệp vụ → vector search top-K trên pgvector → LLM diễn đạt lại bám ngữ cảnh, chống bịa. Bổ sung multi-turn context, phân loại intent, function calling truy vấn dữ liệu thật, tự escalate sang nhân viên khi độ tin cậy thấp.</li>
+        <li>Tự dựng hạ tầng suy luận trên GPU nội bộ: Qwen2.5-7B chạy trên vLLM + embedding bge-m3 trên HF TEI, cả hai expose endpoint chuẩn OpenAI-compatible nên đổi local ↔ cloud chỉ bằng config. Chuyển toàn bộ chatbot từ OpenAI cloud sang self-host, sinh lại embedding cho toàn bộ tri thức (vector 1536 → 1024 chiều) — dữ liệu khách hàng không rời hạ tầng công ty và cắt hẳn chi phí API.</li>
+      </ul>
+
+      <div class="sub">MCP Server — mở nền tảng cho trợ lý AI</div>
+      <ul class="bullets">
+        <li>Xây MCP server (Model Context Protocol) bằng TypeScript/Node để Claude, GPT, Gemini gọi trực tiếp API NextX — khoảng 45 tool trải trên CRM, Sales, Comm, Office, Gym, Golf, HRM, DMS.</li>
+        <li>Xác thực OAuth2 client_credentials (agent JWT) với token cache + tự làm mới; mọi lời gọi đi qua API Gateway và bị giới hạn theo scope của từng route nên trợ lý AI không vượt quyền được.</li>
+      </ul>
+
+      <div class="sub">Comm — Chat đa kênh · chủ trì</div>
+      <ul class="bullets">
+        <li>Hộp thư hợp nhất 4 kênh: Facebook Messenger, Instagram, Zalo OA và Zalo cá nhân (adapter tuỳ biến viết bằng Node); real-time bằng SignalR.</li>
+        <li>Phân phối hội thoại bằng smooth weighted round-robin (thuật toán NGINX): đa chiến lược trọng số / kỹ năng / ưu tiên, presence-aware, Redis distributed lock chống race giữa các webhook đồng thời.</li>
+        <li>Webhook trả 200 OK ngay rồi xử lý bất đồng bộ qua Hangfire; credential kênh mã hóa AES-256-GCM; đồng bộ contact/lead sang CRM &amp; Sales qua gRPC.</li>
+      </ul>
+
+      <div class="sub">CRM &amp; Tổng đài (Call) — phát triển chính</div>
+      <ul class="bullets">
+        <li>Tham gia phát triển CRM: Lead / Contact / Opportunity / Quotation và báo cáo phân tích, expose gRPC cho service khác; tự động phân bổ lead (định tuyến theo rule + chọn nhân viên least-load hoặc weighted round-robin, có distributed lock) và lead scoring chia Hot / Warm / Cold.</li>
+        <li>Chủ trì backend tổng đài tích hợp FreePBX / Asterisk (hạ tầng VoIP do team khác vận hành): đồng bộ nhật ký &amp; ghi âm cuộc gọi, gắn cuộc gọi vào contact/lead trong CRM, chuyển ghi âm thành văn bản (speech-to-text) và phân tích nội dung transcript để lưu, tra cứu.</li>
+      </ul>
+
+      <div class="sub">Fintech — Tích hợp thanh toán, hoá đơn &amp; hợp đồng điện tử</div>
+      <ul class="bullets">
+        <li>Thanh toán online VNPay / VNPayQR / VietQR (sinh mã QR, IPN callback idempotent, đối soát giao dịch); hóa đơn &amp; hợp đồng điện tử tích hợp BKAV, Viettel và MISA — ký số, phát hành, tra cứu, đồng bộ trạng thái.</li>
+      </ul>
+
+      <div class="sub">Marketing &amp; Notification · phát triển chính</div>
+      <ul class="bullets">
+        <li>Engine chiến dịch hàng loạt Email/SMS (Brevo) và Zalo ZNS: workflow MassTransit, gửi lô Hangfire, template MJML, xác minh sender DKIM/SPF; service Notification đa kênh (in-app / push / email) expose gRPC cho toàn nền tảng.</li>
+      </ul>
+
+      <div class="sub">HRM &amp; Chấm công · phát triển</div>
+      <ul class="bullets">
+        <li>HRM: chấm công, nghỉ phép, payroll &amp; BHXH, hợp đồng lao động, hệ thống báo cáo &amp; export.</li>
+        <li>Viết hik-agent (Electron) cầu nối máy chấm công Hikvision / ZKTeco với server qua ISAPI + SignalR: đồng bộ thẻ &amp; khuôn mặt, nhận sự kiện check-in real-time, mở cửa từ xa.</li>
+      </ul>
+
+      <div class="sub">SharedKernel — framework dùng chung cho các service (NuGet nội bộ)</div>
+      <ul class="bullets">
+        <li>Framework Import và Export/Report: mỗi service tự khai báo cột và khoá đối chiếu trùng qua registry + descriptor; chạy inline cho file nhỏ, đẩy queue cho file lớn; job status chuẩn hoá và export theo lịch.</li>
+        <li>Thông báo event-driven trên RabbitMQ: thiết kế contract thin-trigger <b>NotificationRequested</b> — producer chỉ gửi loại + dữ liệu + người nhận, Notification tự chọn kênh và render theo locale; idempotency key chống xử lý trùng, outbox pattern. Chuyển toàn bộ producer sang contract này.</li>
+        <li>Framework Search (Meilisearch): abstraction ISearchClient dùng chung — đổi engine không phải sửa code gọi, có NullSearchClient nên search lỗi thì suy giảm chứ không làm sập request. Cô lập tenant ngay ở tầng client: workspaceId bắt buộc và tự AND vào mọi truy vấn nên caller không thể quên (sinh từ phát hiện audit bảo mật); chuẩn tên index {service}-{entity}, đồng bộ event-driven khi entity đổi + job Hangfire backfill/delta.</li>
+        <li>Tham gia API Gateway (YARP) và IAM: JWT RS256 + JWKS, Argon2id, 2FA TOTP, RBAC, rate limiting; cô lập multi-tenant bằng Row-Level Security + EF global query filter.</li>
+      </ul>
+
+      <div class="phase">04/2024 – 10/2025 · Giai đoạn đầu — phát triển &amp; bảo trì sản phẩm đang vận hành (ASP.NET Core)</div>
+      <ul class="bullets">
+        <li>GymMaster — quản lý phòng gym &amp; CLB thể thao (sản phẩm nội bộ NextX), việc chính: module hội viên (gói tập, đặt sân/làn, trừ buổi), engine khuyến mãi, check-in hội viên kèm lịch sử check-in, và chấm công nhân viên.</li>
+        <li>RMIT — hệ thống đặt phòng &amp; đặt sân cho sinh viên: đăng nhập SSO và đặt phòng/sân theo lịch.</li>
+        <li>Đặt sân pickleball &amp; golf: đặt sân theo slot/lịch, chống trùng khung giờ, quản lý hội viên và gói chơi trên nhiều cơ sở.</li>
+        <li>Backend tổng đài (Call): xây BE trên nền API VOIP có sẵn từ đơn vị khác (hạ tầng do team khác vận hành) — xử lý call-log, gắn cuộc gọi vào bản ghi CRM.</li>
+        <li>CRM: làm báo cáo và bảo trì/sửa lỗi các module CRM đang chạy.</li>
+      </ul>
+
+      <div class="prev"><b>Quy trình:</b> từ 11/2025 làm fullstack (backend .NET + frontend Next.js/React) với AI coding assistant (Claude Code, Codex) để tăng tốc code &amp; refactor — giữ chất lượng bằng code review, unit/integration test và ràng buộc kiến trúc từ shared kernel.</div>
+    </div>
+
+    <div class="job">
+      <div class="job-h"><div class="t">Thực tập sinh Lập trình viên .NET</div><div class="org"><b>FPT Software</b><span class="d">05/2023 – 09/2023 · Hà Nội</span></div></div>
+      <ul class="bullets">
+        <li>Tham gia đội phát triển web .NET: xây dựng REST API bằng ASP.NET Core + EF Core trên SQL Server, viết unit test và tài liệu API; làm việc theo Scrum — task trên Jira, pull request và code review, xử lý bug từ QA.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dự án cá nhân</h2>
+    <div class="job">
+      <div class="sub">AA Catering Management System — đồ án tốt nghiệp</div>
+      <ul class="bullets">
+        <li>Hệ thống quản lý dịch vụ tiệc/catering cho doanh nghiệp: Next.js + ASP.NET Core, cập nhật real-time bằng SignalR, xuất báo cáo Excel, SQL Server, đóng gói Docker.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Học vấn &amp; Ngoại ngữ</h2>
+    <div class="edu">
+      <div><b>Đại học FPT (Hòa Lạc)</b> — Kỹ sư Kỹ thuật phần mềm (Software Engineering) · Tốt nghiệp 12/2024</div>
+      <div><b>Tiếng Anh:</b> đọc/viết tài liệu kỹ thuật tốt; giao tiếp ở mức cơ bản</div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
